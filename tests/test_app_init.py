@@ -27,3 +27,11 @@ def test_internal_packages():
     for pkg in ["chess", "ml", "dl", "training", "tests"]:
         mod = importlib.import_module(pkg)
         assert mod is not None, f"Failed to import project package {pkg}"
+
+
+def test_app_compilation():
+    """Verify that app.py compiles without syntax or name errors at module level."""
+    import py_compile
+    res = py_compile.compile("app.py", doraise=True)
+    assert res is not None
+

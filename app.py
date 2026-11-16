@@ -5,6 +5,7 @@ College Mini-Project: Modular, simple, and clean architecture.
 """
 
 import os
+from typing import Any, Dict, List, Optional, Tuple
 import streamlit as st
 
 # ChessLabs imports
